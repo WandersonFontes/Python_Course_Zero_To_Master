@@ -1,0 +1,14 @@
+#Tuplas são estruturas de dados imutáveis
+
+tupla = (1,2,3,4,5)
+
+
+#Metodo para verificar tamanho da tupla
+#print(len(tupla))
+
+#Metodo pra confirma se um valor está contido na tupla
+#print(5 in tupla)
+
+
+#Metodo para apresentar determinado valor atavés do indice, como nas listas
+print(tupla[0])
