@@ -1,4 +1,4 @@
-class Animal():
+class Animal:
     def specie(self):
         print('Mamifero')
     @classmethod

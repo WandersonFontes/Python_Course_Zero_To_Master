@@ -1,4 +1,4 @@
-class Person():
+class Person:
     genere = None
     name = None
     magician = False
