@@ -78,3 +78,46 @@ test = divisor.join(lista)
 test1 = ' '.join(lista)
 print(test)
 print(test1)
+
+#Methods Iterabbles
+print('-'*100)
+
+newList = ['Developer', 'Product Owner', 'DBA', 'Scrum Master', 'DevOps']
+interable = iter(newList)
+print('-- Functions Techs --\n')
+try:
+    print(next(interable))
+    print(next(interable))
+    print(next(interable))
+    print(next(interable))
+    print(next(interable))
+    print(next(interable))
+    print(next(interable))
+except:
+    pass
+    # print('End')
+finally:
+    print('\nAll functions showed !')
+
+# Read File
+print('-'*100)
+with open('data.txt', 'r') as filePointer:
+    # Read lines from the file if it ends, it displays a blank line
+    for row in iter(filePointer.readline, ''):
+        print(row)
+
+# Enumerate
+print('-'*100)
+for i, funct in enumerate(newList):
+    print(i, funct)
+
+# Zip
+print('-'*100)
+for f in zip(alf, newList):
+    print(f)
+
+
+
+
+
+
