@@ -1,4 +1,5 @@
 import collections
+import string
 
 dictionary = {
     'id':1,
@@ -66,5 +67,36 @@ print(data)
 # Order Dict
 print('-'*50+'\nOrder Dict')
 
-person = [("Magican", (30, 40), ("Archer", (40, 30)), ("Ogre", (50, 20)))]
-print(person)
+# Preson ('Type'+'Atk'+'Def')
+person1 = [("Magican", (30, 40)), ("Archer", (40, 30)), ("Ogre", (90, 90))]
+person2 = [("Magican", (30, 40)), ("Archer", (40, 30))]
+top = sorted(person1, key=lambda p: p[1][0], reverse=True)
+test = collections.OrderedDict(top)
+print(f'{person1}\n{top}\n{test}')
+
+# Equality test
+a = collections.OrderedDict(person1)
+b = collections.OrderedDict(person2)
+
+print(f'Equals: {str(a==b)}')
+
+# Deque
+letters = collections.deque(string.ascii_lowercase)
+
+print(len(letters))
+
+print(f'{"-"*50}\n')
+for letter in letters:
+    print(letter.upper())
+
+
+print(f'{"-"*50}\nChange Deque')
+#Remove
+letters.pop()
+letters.popleft()
+
+#Insert
+letters.append('*')
+letters.appendleft('*')
+for letter in letters:
+    print(letter.upper())
