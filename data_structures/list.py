@@ -1,13 +1,15 @@
+from collections import *
+import collections
 '''
 lista1 = [1,2,3,4,5]
 lista2 = ["Wanderson","da","Cunha","Fontes"]
 lista3 = ['Wanderson', 23, True]
 '''
-#As lista podem conter dados de diferentes tipos
-#Os dados são organizados e localizados através de indexão
+# Lists can contain data of different types.
+# Data is organized and located through indexing
 
-#print(lista2[0::3])
-#Pular indices dentro da lista [inicio:final:indíce]
+# print(lista2[0::3])
+# Skip indices within the list [start:end:index]
 
 #lista3[0]= 'Thiago'
 
@@ -18,38 +20,39 @@ matriz = [
     [7,8,9]
 ]
 print(matriz[1][2])
-#Printa na tela a linha e coluna especificada 
+#Prints the specified row and column on the screen
 '''
 
 
-print(50*'*','Criando e adicionando valores em estruturas de Listas',50*'*')
+print(50*'*','Creating and Adding Values ​​to List Structures',50*'*')
 lista = ['Wanderson','Thiago', 'Navarro']
 email = ['wancf19@gmail.com', 'wanderson@dataautomacao.com']
 
-#Adicionar u valor no final da lista
+# Add a value to the end of the list
 lista.append('Wanderson')
 email.append('wancf19@gmail.com')
 
 lista.insert(1,'Fontes')
-#Inserir valor com um indice especifico da lista
-#list(index,value)
+
+# Enter value with a specific index from the list
+# list(index,value)
 
 
-lista.insert(1,'da')
+lista.insert(1, 'da')
 
-new_list=lista,email
+new_list = lista, email
 print(lista)
 print(new_list)#Exibição de uma lista dentro da outra
 
 
-print('Tamanho da lista: LISTA(',len(lista),')')#tamanho da lista
-print('Tamanho da lista: NEW_LIST(',len(new_list),')')
+print('Size of list: LISTA(', len(lista), ')')# size of list
+print('Size of list: NEW_LIST(', len(new_list), ')')
 
-print('O endereço do dados DA esta na seguinte posição da lista:',lista.index('da'))#Endereço de locação da lista
-print('O endereço do email está na seguinte posição da lista:',email.index('wancf19@gmail.com'))
+print('The DA data address is in the next position in the list:',lista.index('da'))# List rental address
+print('The email address is in the following list position:',email.index('wancf19@gmail.com'))
 
-print(50*'*','Remoção dos elementos das LISTAS',50*'*')
-#new_list.clear()    #APAGAR TODOS OS DADOS DENTRO DA LISTA
+print(50*'*','Removing elements from LISTS',50*'*')
+# new_list.clear()    # DELETE ALL DATA WITHIN THE LIST
 print(new_list)
 
 
@@ -58,18 +61,18 @@ new_list = lista.index('da', 0, 2)
 
 
 print(new_list)
-# Método para verificar se o valor está dentro da lista ou não
+# Method to check whether the value is within the list or not
 print('Cunha' in lista)
-# Método para verifocar quantas vezes um dados se repete dentro da lista
+# Method to check how many times a data is repeated within the list
 print(lista.count('da'))
 
-num = [1,2,3,5,4,7,6,8]
-alf = ['a','c','b','e','d']
-# Método para fazer ordenação dos valores de uma lista
+num = [1, 2, 3, 5, 4, 7, 6, 8]
+alf = ['a', 'c', 'b', 'e', 'd']
+# Method for sorting values ​​in a list
 alf.sort()
-# SORTED(LISTA) Outra forma de colocar em oredem os valores da lista
-print('SORTED =  ',sorted(num),'\nSORTED =  ',alf)
-#RESVERSE atributo para reverter os valores da lista
+# SORTED(LISTA) Another way to put list values ​​in order
+print(f'SORTED =  {sorted(num)}\nSORTED =  {alf}')
+# RESVERSE attribute to revert list values
 num.reverse()
 print(f'REVERSE =  {num}!')
 
@@ -79,7 +82,7 @@ test1 = ' '.join(lista)
 print(test)
 print(test1)
 
-#Methods Iterabbles
+# Methods Iterabbles
 print('-'*100)
 
 newList = ['Developer', 'Product Owner', 'DBA', 'Scrum Master', 'DevOps']
@@ -115,6 +118,31 @@ for i, funct in enumerate(newList):
 print('-'*100)
 for f in zip(alf, newList):
     print(f)
+
+# Collections
+print('-'*50+'\nCollections')
+
+# Count value in array
+array = ['Wanderson', 'Aislan', 'Wanderson', 'Sassá', 'Gilna', 'Júlia', 'Júlia', 'Júlia', 'Geovana']
+countValues = collections.defaultdict(int)
+print(countValues)
+
+countNames = Counter(array)
+print(f'Number Júlia:       {countNames["Júlia"]}')
+print(f'Number Wanderson:   {countNames["Wanderson"]}')
+print(f'Number Geovana:     {countNames["Geovana"]}')
+print(f'Number Aurizete:    {countNames["Aurizete"]}')
+
+print('-'*50+f'\nThe amount names: {sum(countNames.values())}')
+print('-'*50+f'\nThe amount names more common: {countNames.most_common(3)}')
+print('-'*50+f'\nThe amount names more common: {countNames.most_common()}')
+
+
+
+
+
+
+
 
 
 

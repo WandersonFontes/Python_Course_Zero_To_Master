@@ -1,14 +1,29 @@
-#Tuplas são estruturas de dados imutáveis
+import collections
 
+# Tuples are immutable data structures
 tupla = (1,2,3,4,5)
 
+# Method to check tuple size
+# print(len(tupla))
 
-#Metodo para verificar tamanho da tupla
-#print(len(tupla))
+# Metodo pra confirma se um valor está contido na tupla
+# print(5 in tupla)
 
-#Metodo pra confirma se um valor está contido na tupla
-#print(5 in tupla)
-
-
-#Metodo para apresentar determinado valor atavés do indice, como nas listas
+# Method to confirm whether a value is contained in the tuple
 print(tupla[0])
+
+# Collections
+print('-'*50+'\nNamedTupes')
+
+# namedtuple
+axes = collections.namedtuple('Axes', 'x y')
+
+axes1 = axes(2,2)
+print(axes1)
+
+# Alter value
+axes1 = axes1._replace(x=100)
+print(f'\nAlter value:\n{axes1}')
+
+
+

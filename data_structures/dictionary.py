@@ -1,3 +1,4 @@
+import collections
 
 dictionary = {
     'id':1,
@@ -6,59 +7,64 @@ dictionary = {
     'email':'wancf19@gmal.com',
     'alt':1.70
 }
-#Diferente das listas dos dados do dicionário são chamandos atevés das sua respctvas chaves 'dev': trás o valor 'Wanderson'
-#print(dictionary)
-#print(dictionary['dev'],'=',dictionary['email'])
+# Unlike dictionary data lists they are called by their respective 'dev' keys: behind the value 'Wanderson'
+# print(dictionary)
+# print(dictionary['dev'],'=',dictionary['email'])
 
-cadastros = {
-    'user':['Wan','Aislan','Erikles'],
-    'numero':[1,2,3],
-    'bool':True
+records = {
+    'user': ['Wan', 'Aislan', 'Erikles'],
+    'number': [1, 2, 3],
+    'bool': True
 }
-print(cadastros['user'])
+print(records['user'])
 
-test = [{
-    'user':"Wanderon"
-    },{
-    'email':'wancf19@gmail.com'
-    },{
-    'developer':'Pyton'
+data = [{
+    'user': "Wanderon"
+    }, {
+    'email': 'wancf19@gmail.com'
+    }, {
+    'developer': 'Pyton'
     }
 ]
-#print(test[0],test[1])
-#Dessa forma não é possível buscar um valor do dicionario dentro da lista através da chave e sim através do indice da lista
+# print(data[0],data[1])
+# Thus, it is not possible to search a dictionary value within the list through the key, but through the list index
+
+# Methods and Functions
+data = dict(
+    nome='Wanderson',
+    email='wancf19@gmail.com'
+    )
+
+# Check if you have a certain key inside the dictionary
+print('I' in data.keys())
+print('Thiago' in data.values())
+# print(test)
+
+# Delete all data within the dictionary
+# data.clear()
+# print(test)
+# data.pop('email') # delete the last element from the key
+# print(test)
 
 
-#Metodos e funções
-test = dict(nome='Wanderson',
-            email='wancf19@gmail.com'
-            )
-#Verificar se tem uma determinada chave dentro do dicionario
-print('Eu' in test.keys())
-print('Thiago' in test.values())
-#print(test)
+# Copy keys and values ​​to another dictionary
+data2 = data.copy()
+print(data)
+print(data2)
 
-#Apagar todos os dados dentro do dicionario
-#test.clear()
-#print(test)
-#test.pop('email') #exclui o ultimo elemnto a partir da chave
-#print(test)
-
-
-#Fazer copia das chave e valores para outro dicionario
-test2 = test.copy()
-print(test)
-print(test2)
-
-#Mudar valor do dicionario
-test = dict(
+# Change dictionary value
+data = dict(
     nome="Wanderson"
 )
-#test.update({'nome':'Thiago'})
+# data.update({'nome':'Thiago'})
+
+# Change dictionary key
+data['user'] = data.pop('nome')
+print(data)
 
 
+# Order Dict
+print('-'*50+'\nOrder Dict')
 
-#Mudar chave do dicionario
-test['user'] = test.pop('nome')
-
-print(test)
+person = [("Magican", (30, 40), ("Archer", (40, 30)), ("Ogre", (50, 20)))]
+print(person)
