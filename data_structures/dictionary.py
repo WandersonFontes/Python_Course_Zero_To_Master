@@ -100,3 +100,13 @@ letters.append('*')
 letters.appendleft('*')
 for letter in letters:
     print(letter.upper())
+
+# Comprehension
+# Structure -> [value+1 for value in list]
+print('-'*50+f'\nComprehension')
+print(data)
+
+
+name = ['w', 'a', 'n', 'd', 'e', 'r', 's', 'o', 'n']
+comprehension = {n: (n.upper()) for n in name}
+print(comprehension)

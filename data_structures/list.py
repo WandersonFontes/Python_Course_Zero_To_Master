@@ -137,6 +137,19 @@ print('-'*50+f'\nThe amount names: {sum(countNames.values())}')
 print('-'*50+f'\nThe amount names more common: {countNames.most_common(3)}')
 print('-'*50+f'\nThe amount names more common: {countNames.most_common()}')
 
+# Comprehension
+# Structure -> [value+1 for value in list]
+print('-'*50+f'\nComprehension')
+
+number = [1, 2, 3]
+comprehension1 = [n+1 for n in number]
+print(comprehension1)
+
+comprehension2 = [n*2 for n in number if n > 3]
+print(comprehension2)
+
+comprehension3 = [n*2 for n in number if n == 1]
+print(comprehension3)
 
 
 

@@ -29,8 +29,8 @@ data = {
     'work': 'Developer',
     'level': 'Full'
 }
-
-templ3 = Template("Who am I?\nMy name is ${name}.\nI work with ${work}.\nMy level is ${level}!")
+tx = "Who am I?\nMy name is ${name}.\nI work with ${work}.\nMy level is ${level}!"
+templ3 = Template(tx)
 templUpdate3 = templ3.substitute(data)
 print(templUpdate3+'\n'+('-'*50))
 
